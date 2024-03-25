@@ -8,17 +8,19 @@
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container col-xxl-8 px-4 py-5 mt-5 mx-auto">
+    <div class="container col-xxl-8 px-4 py-3 mt-5 mx-auto">
         <div class="row flex-lg-row align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-6">
             <img src="quote.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
           </div>
           <div class="col-lg-6">
             <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 pr-3">To-Do List</h1>
-            <form action="/" method="POST">
+            <form action="/" method="POST" class="d-inline">
             <input type="text" placeholder="Add Items" name="todoInput" class="m-3">
             <button type="submit" class="btn btn-primary btn-md px-4 me-md-2" id="btn">Add Item</button>
             </form>
+            <form action="/reset" class="d-inline" method="post"><button class=" btn btn-danger d-inline" >Hard Reset</button>
+              </form>
         <ul id="todo-list-items">
           <%   for(i=0;i<listItems.length;i++){ %>
             <li><input type="checkbox" class="check"><label><%= listItems[i] %> </label></li>

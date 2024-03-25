@@ -2,7 +2,7 @@ const bodyParser = require('body-parser')
 const express = require('express')
 
 const app = express()
-const listItems = []
+let listItems = []
 
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended:true}))
@@ -15,6 +15,11 @@ app.get('/',(req,res)=>{
 app.post('/',(req,res)=>{
 listItems.push(req.body.todoInput)
 
+res.redirect('/')
+})
+
+app.post('/reset',(req,res)=>{
+    listItems = []
 res.redirect('/')
 })
 app.listen(process.env.PORT || 3000, ()=>{
