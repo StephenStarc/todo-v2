@@ -1,0 +1,15 @@
+input{
+    margin-right: 10px;
+}
+ul{
+    list-style: none;
+}
+label{
+    padding: 3px 0;
+}
+li{
+    cursor: pointer;
+}
+.compeleted{
+    text-decoration: line-through;
+}
